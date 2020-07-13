@@ -25,7 +25,7 @@ class StudentController extends Controller
      */
     public function create()
     {
-        return 'form per l\' iscrizione di uno studente';
+        return view('student.create');
     }
 
     /**
@@ -36,7 +36,13 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+
+        $new_student = new Student();
+        $new_student->fill($data);
+        $new_student->save();
+        return redirect()->route('students.index');
+
     }
 
     /**
