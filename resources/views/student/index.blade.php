@@ -30,8 +30,10 @@
                                 <td>{{ $studente->lastname }}</td>
                                 <td>{{ $studente->matricola }}</td>
                                 <td>{{ $studente->email }}</td>
-                                <td>
+                                <td class="text-right">
                                     <a class="btn btn-info" href="{{ route('students.show', ['student' => $studente->id]) }}">Dettagli</a>
+                                    <a class="btn btn-warning" href="#">Modifica</a>
+                                    <a class="btn btn-danger" href="#">Elimina</a>
                                 </td>
                             </tr>
 
