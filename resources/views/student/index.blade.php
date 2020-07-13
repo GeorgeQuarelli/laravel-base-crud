@@ -6,7 +6,10 @@
     <div class="container">
         <div class="row">
             <div class="col12">
-                <h1>Lista Studenti</h1>
+                <div class="d-flex justify-content-between align-items-center">
+                    <h1 class="mt-3 mb-3">Lista Studenti</h1>
+                    <a class="btn btn-primary" href="{{ route('students.create') }}">Inserisci Studente</a>
+                </div>
                 <table class="table">
                     <thead>
                         <tr>
