@@ -32,8 +32,12 @@
                                 <td>{{ $studente->email }}</td>
                                 <td class="text-right">
                                     <a class="btn btn-info" href="{{ route('students.show', ['student' => $studente->id]) }}">Dettagli</a>
-                                    <a class="btn btn-warning" href="#">Modifica</a>
-                                    <a class="btn btn-danger" href="#">Elimina</a>
+                                    <a class="btn btn-warning" href="{{ route('students.edit', ['student' => $studente->id]) }}">Modifica</a>
+                                    <form class='d-inline-block' action="{{ route('students.destroy', ['student' => $studente->id]) }}" method="POST">
+                                        @method('DELETE')
+                                        @csrf
+                                        <input type='submit' class='btn btn-danger bt-small' value='Elimina'>
+                                    </form>
                                 </td>
                             </tr>
 
