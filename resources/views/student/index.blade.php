@@ -15,6 +15,7 @@
                             <th>Cognome</th>
                             <th>Matricola</th>
                             <th>Email</th>
+                            <th>Azioni</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -26,6 +27,9 @@
                                 <td>{{ $studente->lastname }}</td>
                                 <td>{{ $studente->matricola }}</td>
                                 <td>{{ $studente->email }}</td>
+                                <td>
+                                    <a class="btn btn-info" href="{{ route('students.show', ['student' => $studente->id]) }}">Dettagli</a>
+                                </td>
                             </tr>
 
                         @endforeach
